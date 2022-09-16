@@ -21,7 +21,7 @@ script:
   - docker build -t udagram-frontend ./udagram-frontend
   - docker tag udagram-api-user brytey2k/udagram-api-user:v3
   - docker tag udagram-api-feed brytey2k/udagram-api-feed:v3
-  - docker tag udagram-reverseproxy brytey2k/udagram-reverseproxy:v3
+  - docker tag udagram-reverseproxy brytey2k/udagram-reverseproxy:v4
   - docker tag udagram-frontend brytey2k/udagram-frontend:v3
 
 after_success:
@@ -29,4 +29,4 @@ after_success:
   - docker push brytey2k/udagram-api-user:v3
   - docker push brytey2k/udagram-api-feed:v3
   - docker push brytey2k/udagram-frontend:v3
-  - docker push brytey2k/udagram-reverseproxy:v3
+  - docker push brytey2k/udagram-reverseproxy:v4
