@@ -9,5 +9,5 @@ data:
   AWS_BUCKET: "eazismspro-dev"
   AWS_REGION: "us-east-1"
   AWS_PROFILE: "default"
-  URL: "http://localhost"
+  URL: "http://localhost:8080"
   JWT_SECRET: "testing"
