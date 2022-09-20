@@ -28,16 +28,11 @@ spec:
             secretKeyRef:
               name: env-secret
               key: POSTGRES_PASSWORD
-        - name: aws_access_key_id
+        - name: credentials
           valueFrom:
             secretKeyRef:
               name: aws-secret
-              key: aws_access_key_id
-        - name: aws_secret_access_key
-          valueFrom:
-            secretKeyRef:
-              name: aws-secret
-              key: aws_secret_access_key
+              key: credentials
         - name: POSTGRES_HOST
           valueFrom:
             configMapKeyRef:

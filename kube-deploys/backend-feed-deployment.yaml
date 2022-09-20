@@ -15,7 +15,7 @@ spec:
         service: backend-feed
     spec:
       containers:
-      - image: brytey2k/udagram-api-feed:v3
+      - image: brytey2k/udagram-api-feed:v4
         name: backend-feed
         env:
         - name: POSTGRES_USERNAME
@@ -28,16 +28,11 @@ spec:
             secretKeyRef:
               name: env-secret
               key: POSTGRES_PASSWORD
-        - name: aws_access_key_id
+        - name: credentials
           valueFrom:
             secretKeyRef:
               name: aws-secret
-              key: aws_access_key_id
-        - name: aws_secret_access_key
-          valueFrom:
-            secretKeyRef:
-              name: aws-secret
-              key: aws_secret_access_key
+              key: credentials
         - name: POSTGRES_HOST
           valueFrom:
             configMapKeyRef:

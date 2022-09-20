@@ -15,7 +15,7 @@ spec:
         service: frontend
     spec:
       containers:
-      - image: brytey2k/udagram-frontend:v6
+      - image: brytey2k/udagram-frontend:v7
         name: frontend
         env:
         - name: POSTGRES_USERNAME
@@ -28,16 +28,11 @@ spec:
             secretKeyRef:
               name: env-secret
               key: POSTGRES_PASSWORD
-        - name: aws_access_key_id
+        - name: credentials
           valueFrom:
             secretKeyRef:
               name: aws-secret
-              key: aws_access_key_id
-        - name: aws_secret_access_key
-          valueFrom:
-            secretKeyRef:
-              name: aws-secret
-              key: aws_secret_access_key
+              key: credentials
         - name: POSTGRES_HOST
           valueFrom:
             configMapKeyRef:
@@ -82,7 +77,7 @@ spec:
             memory: "1024Mi"
             cpu: "500m"       
         ports:
-        - containerPort: 8080
+        - containerPort: 80
       restartPolicy: Always
 
 
