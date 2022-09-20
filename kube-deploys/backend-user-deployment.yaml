@@ -15,7 +15,7 @@ spec:
         service: backend-user
     spec:
       containers:
-      - image: brytey2k/udagram-api-user:v4
+      - image: brytey2k/udagram-api-user:v5
         name: backend-user
         env:
         - name: POSTGRES_USERNAME
