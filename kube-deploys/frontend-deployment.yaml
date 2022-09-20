@@ -15,7 +15,7 @@ spec:
         service: frontend
     spec:
       containers:
-      - image: brytey2k/udagram-frontend:v4
+      - image: brytey2k/udagram-frontend:v6
         name: frontend
         env:
         - name: POSTGRES_USERNAME
