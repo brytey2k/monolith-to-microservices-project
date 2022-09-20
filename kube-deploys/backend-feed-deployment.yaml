@@ -15,7 +15,7 @@ spec:
         service: backend-feed
     spec:
       containers:
-      - image: brytey2k/udagram-api-feed:v5
+      - image: brytey2k/udagram-api-feed:v6
         name: backend-feed
         env:
         - name: POSTGRES_USERNAME
